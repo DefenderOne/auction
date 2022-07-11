@@ -3,6 +3,7 @@ using System;
 using Auction.App.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Auction.App.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220711123719_Remove item type")]
+    partial class Removeitemtype
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -104,7 +106,7 @@ namespace Auction.App.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("auction_id");
 
-                    b.Property<int?>("BuyerId")
+                    b.Property<int>("BuyerId")
                         .HasColumnType("integer")
                         .HasColumnName("buyer_id");
 
@@ -185,6 +187,8 @@ namespace Auction.App.Migrations
                     b.HasOne("Auction.App.Models.Member", "Buyer")
                         .WithMany("BoughtItems")
                         .HasForeignKey("BuyerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
                         .HasConstraintName("fk_lots_members_buyer_id");
 
                     b.HasOne("Auction.App.Models.Item", "Item")

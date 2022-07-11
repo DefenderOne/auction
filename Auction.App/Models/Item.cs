@@ -9,8 +9,7 @@ public class Item
 
     public string Name { get; set; }
 
-    public int TypeId { get; set; }
-    public ItemType Type { get; set; }
+    public string Type { get; set; }
 
     public Lot Lot { get; set; }
 

@@ -13,6 +13,6 @@ public class Lot
     public decimal StartPrice { get; set; }
     public decimal EndPrice { get; set; }
     
-    public int BuyerId { get; set; }
+    public int? BuyerId { get; set; }
     public Member Buyer { get; set; }
 }

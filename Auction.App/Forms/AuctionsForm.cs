@@ -1,6 +1,5 @@
 ﻿using Auction.App.Database;
 using Auction.App.Models;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,41 +12,41 @@ using System.Windows.Forms;
 
 namespace Auction.App.Forms
 {
-    public partial class MembersForm : Form
+    public partial class AuctionsForm : Form
     {
         private DataContext context;
-        public MembersForm()
+        public AuctionsForm()
         {
             InitializeComponent();
             context = new DataContext();
-            memberGrid.DataSource = context.Members.ToList();
-            memberGrid.Columns.GetFirstColumn(DataGridViewElementStates.Visible).Visible = false;
+            auctionGrid.DataSource = context.Auctions.ToList();
+            auctionGrid.Columns.GetFirstColumn(DataGridViewElementStates.Visible).Visible = false;
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            var form = new CreateMemberForm();
+            var form = new CreateAuctionForm();
             form.ShowDialog();
             if (form.DialogResult == DialogResult.OK)
             {
-                context.Members.Add(form.Result);
+                context.Auctions.Add(form.Result);
                 context.SaveChanges();
-                memberGrid.DataSource = context.Members.ToList();
+                auctionGrid.DataSource = context.Auctions.ToList();
             }
         }
 
         private void removeButton_Click(object sender, EventArgs e)
         {
-            var list = (List<Member>)memberGrid.DataSource;
-            if (memberGrid.SelectedRows.Count != 0)
+            var list = (List<AuctionInfo>)auctionGrid.DataSource;
+            if (auctionGrid.SelectedRows.Count != 0)
             {
-                foreach (var row in memberGrid.SelectedRows)
+                foreach (var row in auctionGrid.SelectedRows)
                 {
                     var index = ((DataGridViewRow)row).Index;
-                    context.Members.Remove(list[index]);
+                    context.Auctions.Remove(list[index]);
                 }
                 context.SaveChanges();
-                memberGrid.DataSource = context.Members.ToList();
+                auctionGrid.DataSource = context.Auctions.ToList();
             }
         }
     }

@@ -59,6 +59,7 @@
             this.task2Button.TabIndex = 1;
             this.task2Button.Text = "Добавить предмет на аукцион";
             this.task2Button.UseVisualStyleBackColor = true;
+            this.task2Button.Click += new System.EventHandler(this.task2Button_Click);
             // 
             // task3Button
             // 
@@ -111,8 +112,9 @@
             this.task8Button.Name = "task8Button";
             this.task8Button.Size = new System.Drawing.Size(377, 23);
             this.task8Button.TabIndex = 7;
-            this.task8Button.Text = "Создать аукцион";
+            this.task8Button.Text = "Информация об аукционах";
             this.task8Button.UseVisualStyleBackColor = true;
+            this.task8Button.Click += new System.EventHandler(this.task8Button_Click);
             // 
             // task9Button
             // 
@@ -140,6 +142,7 @@
             this.task11Button.TabIndex = 10;
             this.task11Button.Text = "Информация о продавцах и покупателях";
             this.task11Button.UseVisualStyleBackColor = true;
+            this.task11Button.Click += new System.EventHandler(this.task11Button_Click);
             // 
             // task12Button
             // 
@@ -167,6 +170,9 @@
             this.Controls.Add(this.task3Button);
             this.Controls.Add(this.task2Button);
             this.Controls.Add(this.task1Button);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.Text = "Аукционы";
             this.ResumeLayout(false);

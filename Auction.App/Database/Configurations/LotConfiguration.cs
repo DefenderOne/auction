@@ -12,7 +12,7 @@ public class LotConfiguration : IEntityTypeConfiguration<Lot>
         builder.HasIndex(l => l.ItemId).IsUnique();
         builder.HasOne(l => l.Item).WithOne(i => i.Lot).HasForeignKey<Lot>(l => l.ItemId);
         builder.HasOne(l => l.Auction).WithMany(a => a.Lots).HasForeignKey(l => l.AuctionId);
-        builder.HasOne(l => l.Buyer).WithMany(a => a.BoughtItems).HasForeignKey(i => i.BuyerId);
+        builder.HasOne(l => l.Buyer).WithMany(a => a.BoughtItems).HasForeignKey(i => i.BuyerId).IsRequired(false);
         builder.Property(l => l.StartPrice).IsRequired();
     }
 }
