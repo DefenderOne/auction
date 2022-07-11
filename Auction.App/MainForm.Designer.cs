@@ -87,6 +87,7 @@
             this.task5Button.TabIndex = 4;
             this.task5Button.Text = "Совершить продажу предмета на аукционе";
             this.task5Button.UseVisualStyleBackColor = true;
+            this.task5Button.Click += new System.EventHandler(this.task5Button_Click);
             // 
             // task6Button
             // 

@@ -4,6 +4,9 @@
     <Compile Update="Forms\AuctionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\BuyItemOnAuctionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\CreateAuctionForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -26,5 +26,11 @@ namespace Auction.App
             var placeItemOnAuction = new PlaceItemOnAuctionForm();
             placeItemOnAuction.ShowDialog();
         }
+
+        private void task5Button_Click(object sender, EventArgs e)
+        {
+            var buyItemOnAuction = new BuyItemOnAuctionForm();
+            buyItemOnAuction.ShowDialog();
+        }
     }
 }
