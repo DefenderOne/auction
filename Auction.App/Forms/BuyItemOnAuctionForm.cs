@@ -45,20 +45,27 @@ namespace Auction.App.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var lot = ((comboBox1.SelectedItem as ComboboxItem).Value as Lot);
-            var buyer = ((comboBox2.SelectedItem as ComboboxItem).Value as Member);
-            if (comboBox1.SelectedItem is not null &&
-                comboBox2.SelectedItem is not null &&
-                decimal.TryParse(textBox1.Text, out var endPrice) &&
-                endPrice >= lot.StartPrice)
+            try
             {
-                lot.EndPrice = endPrice;
-                lot.Buyer = buyer;
-                var item = context.Items.First(i => i.Id == lot.ItemId);
-                item.IsSold = true;
-                context.Lots.Update(lot);
-                context.Items.Update(item);
-                context.SaveChanges();
+                var lot = ((comboBox1.SelectedItem as ComboboxItem).Value as Lot);
+                var buyer = ((comboBox2.SelectedItem as ComboboxItem).Value as Member);
+                if (comboBox1.SelectedItem is not null &&
+                    comboBox2.SelectedItem is not null &&
+                    decimal.TryParse(textBox1.Text, out var endPrice) &&
+                    endPrice >= lot.StartPrice)
+                {
+                    lot.EndPrice = endPrice;
+                    lot.Buyer = buyer;
+                    var item = context.Items.First(i => i.Id == lot.ItemId);
+                    item.IsSold = true;
+                    context.Lots.Update(lot);
+                    context.Items.Update(item);
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
