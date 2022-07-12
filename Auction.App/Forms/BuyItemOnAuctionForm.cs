@@ -23,7 +23,7 @@ namespace Auction.App.Forms
             InitializeComponent();
             context = new DataContext();
             var lots = context.Lots.Include(l => l.Item).Include(l => l.Auction).ToList();
-            comboBox1.DataSource = lots.Select(x => new ComboboxItem
+            comboBox1.DataSource = lots.Where(l => !l.Item.IsSold).Select(x => new ComboboxItem
             {
                 Text = $"Лот: {x.Item.Name}. Аукцион: {x.Auction.Address}",
                 Value = x
@@ -58,6 +58,7 @@ namespace Auction.App.Forms
                     lot.Buyer = buyer;
                     var item = context.Items.First(i => i.Id == lot.ItemId);
                     item.IsSold = true;
+                    item.ReceivedAt = lot.Auction.Date;
                     context.Lots.Update(lot);
                     context.Items.Update(item);
                     context.SaveChanges();

@@ -44,31 +44,36 @@
             // 
             // task1Button
             // 
+            this.task1Button.BackColor = System.Drawing.SystemColors.ControlLight;
             this.task1Button.Location = new System.Drawing.Point(12, 12);
             this.task1Button.Name = "task1Button";
             this.task1Button.Size = new System.Drawing.Size(377, 23);
             this.task1Button.TabIndex = 0;
             this.task1Button.Text = "Список аукционов для интервала дат";
-            this.task1Button.UseVisualStyleBackColor = true;
+            this.task1Button.UseVisualStyleBackColor = false;
+            this.task1Button.Click += new System.EventHandler(this.task1Button_Click);
             // 
             // task2Button
             // 
+            this.task2Button.BackColor = System.Drawing.SystemColors.ControlLight;
             this.task2Button.Location = new System.Drawing.Point(12, 41);
             this.task2Button.Name = "task2Button";
             this.task2Button.Size = new System.Drawing.Size(377, 23);
             this.task2Button.TabIndex = 1;
             this.task2Button.Text = "Добавить предмет на аукцион";
-            this.task2Button.UseVisualStyleBackColor = true;
+            this.task2Button.UseVisualStyleBackColor = false;
             this.task2Button.Click += new System.EventHandler(this.task2Button_Click);
             // 
             // task3Button
             // 
+            this.task3Button.BackColor = System.Drawing.SystemColors.ControlLight;
             this.task3Button.Location = new System.Drawing.Point(12, 70);
             this.task3Button.Name = "task3Button";
             this.task3Button.Size = new System.Drawing.Size(377, 23);
             this.task3Button.TabIndex = 2;
             this.task3Button.Text = "Список аукционов с суммарным доходом";
-            this.task3Button.UseVisualStyleBackColor = true;
+            this.task3Button.UseVisualStyleBackColor = false;
+            this.task3Button.Click += new System.EventHandler(this.task3Button_Click);
             // 
             // task4Button
             // 
@@ -78,6 +83,7 @@
             this.task4Button.TabIndex = 3;
             this.task4Button.Text = "Список предметов, проданных за интервал дат";
             this.task4Button.UseVisualStyleBackColor = true;
+            this.task4Button.Click += new System.EventHandler(this.task4Button_Click);
             // 
             // task5Button
             // 
@@ -91,12 +97,14 @@
             // 
             // task6Button
             // 
+            this.task6Button.BackColor = System.Drawing.SystemColors.ControlLight;
             this.task6Button.Location = new System.Drawing.Point(12, 157);
             this.task6Button.Name = "task6Button";
             this.task6Button.Size = new System.Drawing.Size(377, 23);
             this.task6Button.TabIndex = 5;
             this.task6Button.Text = "Список продавцов и общая сумма от продаж за интервал дат";
-            this.task6Button.UseVisualStyleBackColor = true;
+            this.task6Button.UseVisualStyleBackColor = false;
+            this.task6Button.Click += new System.EventHandler(this.task6Button_Click);
             // 
             // task7Button
             // 
@@ -106,6 +114,7 @@
             this.task7Button.TabIndex = 6;
             this.task7Button.Text = "Список покупателей, купивших что-то за интервал дат";
             this.task7Button.UseVisualStyleBackColor = true;
+            this.task7Button.Click += new System.EventHandler(this.task7Button_Click);
             // 
             // task8Button
             // 
@@ -119,21 +128,25 @@
             // 
             // task9Button
             // 
+            this.task9Button.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.task9Button.Location = new System.Drawing.Point(12, 244);
             this.task9Button.Name = "task9Button";
             this.task9Button.Size = new System.Drawing.Size(377, 23);
             this.task9Button.TabIndex = 8;
             this.task9Button.Text = "Список аукционов для указанного места";
-            this.task9Button.UseVisualStyleBackColor = true;
+            this.task9Button.UseVisualStyleBackColor = false;
+            this.task9Button.Click += new System.EventHandler(this.task9Button_Click);
             // 
             // task10Button
             // 
+            this.task10Button.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.task10Button.Location = new System.Drawing.Point(12, 273);
             this.task10Button.Name = "task10Button";
             this.task10Button.Size = new System.Drawing.Size(377, 23);
             this.task10Button.TabIndex = 9;
             this.task10Button.Text = "Список продавцов, участвовавших в торгах за период времени";
-            this.task10Button.UseVisualStyleBackColor = true;
+            this.task10Button.UseVisualStyleBackColor = false;
+            this.task10Button.Click += new System.EventHandler(this.task10Button_Click);
             // 
             // task11Button
             // 
@@ -147,12 +160,14 @@
             // 
             // task12Button
             // 
+            this.task12Button.BackColor = System.Drawing.SystemColors.ControlLight;
             this.task12Button.Location = new System.Drawing.Point(12, 331);
             this.task12Button.Name = "task12Button";
             this.task12Button.Size = new System.Drawing.Size(377, 23);
             this.task12Button.TabIndex = 11;
             this.task12Button.Text = "Списоку покупателей за указанный срок";
-            this.task12Button.UseVisualStyleBackColor = true;
+            this.task12Button.UseVisualStyleBackColor = false;
+            this.task12Button.Click += new System.EventHandler(this.task12Button_Click);
             // 
             // MainForm
             // 
