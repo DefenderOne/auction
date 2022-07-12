@@ -87,7 +87,8 @@ namespace Auction.App
 
         private void task9Button_Click(object sender, EventArgs e)
         {
-
+            var form = new AuctionListForm();
+            form.ShowDialog();
         }
 
         private void task10Button_Click(object sender, EventArgs e)

@@ -128,7 +128,7 @@
             // 
             // task9Button
             // 
-            this.task9Button.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.task9Button.BackColor = System.Drawing.SystemColors.ControlLight;
             this.task9Button.Location = new System.Drawing.Point(12, 244);
             this.task9Button.Name = "task9Button";
             this.task9Button.Size = new System.Drawing.Size(377, 23);
@@ -139,7 +139,7 @@
             // 
             // task10Button
             // 
-            this.task10Button.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.task10Button.BackColor = System.Drawing.SystemColors.ControlLight;
             this.task10Button.Location = new System.Drawing.Point(12, 273);
             this.task10Button.Name = "task10Button";
             this.task10Button.Size = new System.Drawing.Size(377, 23);
